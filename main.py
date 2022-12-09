@@ -144,7 +144,7 @@ async def on_message(message):
             await message.channel.send(info)
         return
     if (message.content.startsWith('!dd-embed')):
-        info = get_last_deep_dive_info_embed(True)
+        info = get_last_deep_dive_info_embed()
         for embed in info:
             await client.send(embed)
 
