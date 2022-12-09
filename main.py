@@ -143,11 +143,12 @@ async def on_message(message):
         if info:
             await message.channel.send(info)
         return
-    if (message.content.startsWith('!dd-embed')):
+    if (message.content.startsWith('!mobile-dd')):
         info = get_last_deep_dive_info_embed()
         print('sending embed')
         for embed in info:
             await client.send(embed)
+        return
 
     if (message.content.startswith('!rand')):
         splitted_message = message.content.split(' ')
