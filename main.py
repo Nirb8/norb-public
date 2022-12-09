@@ -25,14 +25,17 @@ class DeepDive:
     
     def to_beautiful_string(self):
         out = f'**{self.type}**\n```\n'
-        out += tabulate(self.stages, headers=["Stage", "Primary", "Secondary", "Anomaly", "Warning"], tablefmt="fancy_grid")
+        out += tabulate(self.stages, header=["Stage", "Primary", "Secondary", "Anomaly", "Warning"], tablefmt="fancy_grid")
         out += '```'
         return out
     def to_beautiful_embed(self):
         out = discord.Embed(
-		title = self.type, 
-		description = DeepDive.to_beautiful_string(self),
-		headers=["Stage", "Primary", "Secondary", "Anomaly", "Warning"])
+		title = self.type)
+        for stage in self.stages:
+            if stage[1].startswith("Primary") :
+                continue
+            stageContents = "Primary Obj: {primary}, Secondary Obj: {secondary}\nAnomaly: {anomaly}\nWarning: {warning}".format(primary=stage[1], secondary=stage[2], anomaly=stage[3], anomaly=stage[4])
+            out.add_field(name=stage[0], value=stageContents, inline=False)
         return out
 
 def parse_deep_dive_info(text, type):
@@ -137,6 +140,7 @@ async def on_message(message):
 
     raw_cmd = ['!deep-dive-raw']
     dd_cmd = ['!deep-dive', '!deepdive', '!dd']
+    dd_mobile_cmd = ['!compact-dd', '!mobile-dd', '!cdd', '!sdd']
     if any(map(message.content.startswith, raw_cmd)):
         info = get_last_deep_dive_info(True)
         await message.channel.send(info)
@@ -146,7 +150,7 @@ async def on_message(message):
         if info:
             await message.channel.send(info)
         return
-    if (message.content.startswith('!mobile-dd')):
+    if any(map(message.content.startswith, dd_mobile_cmd)):
         info = get_last_deep_dive_info_embed()
         print('sending embed')
         for embed in info:
