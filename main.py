@@ -143,7 +143,7 @@ async def on_message(message):
         if info:
             await message.channel.send(info)
         return
-    if (message.content.startsWith('!mobile-dd')):
+    if (message.content.startswith('!mobile-dd')):
         info = get_last_deep_dive_info_embed()
         print('sending embed')
         for embed in info:
