@@ -147,7 +147,7 @@ async def on_message(message):
         info = get_last_deep_dive_info_embed()
         print('sending embed')
         for embed in info:
-            await client.send(embed)
+            await message.channel.send(embed = embed)
         return
 
     if (message.content.startswith('!rand')):
