@@ -29,13 +29,15 @@ class DeepDive:
         out += '```'
         return out
     def to_beautiful_embed(self):
-        out = discord.Embed(
-		title = self.type)
+        diveColor = 0xffc800
+        if self.type.startswith("Elite Deep Dive") :
+            diveColor = 0xb82500
+        out = discord.Embed(title = self.type, color = diveColor)
         for stage in self.stages:
             if stage[1].startswith("Primary") :
                 continue
-            stageContents = "**Primary**: {primary}, **Secondary**: {secondary}\n**Anomaly**: {anomaly}\n**Warning**: {warning}".format(primary=stage[1], secondary=stage[2], anomaly=stage[3], warning=stage[4])
-            out.add_field(name=stage[0], value=stageContents, inline=False)
+            stageContents = "**Objectives**: {primary}**/**{secondary}\n**Anomaly**: {anomaly}\n**Warning**: {warning}".format(primary=stage[1], secondary=stage[2], anomaly=stage[3], warning=stage[4])
+            out.add_field(name="Stage {stg}".format(stg=stage[0]), value=stageContents, inline=False)
         return out
 
 def parse_deep_dive_info(text, type):
