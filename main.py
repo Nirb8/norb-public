@@ -36,7 +36,7 @@ class DeepDive:
         for stage in self.stages:
             if stage[1].startswith("Primary") :
                 continue
-            stageContents = "**Objectives**: {primary}**/**{secondary}\n**Anomaly**: {anomaly}\n**Warning**: {warning}".format(primary=stage[1], secondary=stage[2], anomaly=stage[3], warning=stage[4])
+            stageContents = "**Objectives**: {primary}** / **{secondary}\n**Anomaly**: {anomaly}\n**Warning**: {warning}".format(primary=stage[1], secondary=stage[2], anomaly=stage[3], warning=stage[4])
             out.add_field(name="Stage {stg}".format(stg=stage[0]), value=stageContents, inline=False)
         return out
 
