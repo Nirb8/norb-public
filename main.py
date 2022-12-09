@@ -29,7 +29,10 @@ class DeepDive:
         out += '```'
         return out
     def to_beautiful_embed(self):
-        out = discord.Embed(title = self.type, description = DeepDive.to_beautiful_string(self))
+        out = discord.Embed(
+		title = self.type, 
+		description = DeepDive.to_beautiful_string(self),
+		headers=["Stage", "Primary", "Secondary", "Anomaly", "Warning"])
         return out
 
 def parse_deep_dive_info(text, type):
