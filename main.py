@@ -32,7 +32,7 @@ class DeepDive:
         diveColor = 0xffc800
         if self.type.startswith("Elite Deep Dive") :
             diveColor = 0xb82500
-        out = discord.Embed(title = self.type, color = diveColor)
+        out = discord.Embed(title = "**{type} | {name}".format(type = self.type, name=self.name), color = diveColor)
         for stage in self.stages:
             if stage[1].startswith("Primary") :
                 continue
@@ -175,8 +175,7 @@ async def on_message(message):
     if any(map(message.content.startswith, dd_mobile_cmd)):
         info = get_last_deep_dive_info_embed()
         print('sending embed')
-        dd = parse_deep_dive_info(get_last_deep_dive_submission().selftext, 'Deep Dive')
-        await message.channel.send(dd.name)
+        await message.channel.send(get_last_deep_dive_submission().title)
         for embed in info:
             await message.channel.send(embed = embed)
         return
