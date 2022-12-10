@@ -42,24 +42,24 @@ class DeepDive:
 def get_mission_icon(input) :
     text = input.lower()
     if 'morkite' in text :
-        return ':mining:'
+        return '<:mining:1050919827809783950>'
     if 'eggs' in text :
-        return ':alienegg:'
+        return '<:alienegg:1050919736516558878>'
     if 'escort duty' in text :
-        return ':escort:'
+        return '<:escort:1050919813242953769>'
     if 'aquarqs' in text :
-        return ':pointextraction:'
+        return '<:pointextraction:1050919841617416203>'
     if 'refinery' in text :
-        return ':refining:'
+        return '<:refining:1050919894478245970>'
     if 'industrial sabotage' in text :
-        return ':sabotage:'
+        return '<:sabotage:1050919908772417597>'
     if 'dreadnaught' in text or 'twins' in text or 'hiveguard' in text:
-        return ':elim:'
+        return '<:elim:1050919798395129956>'
     if 'mini-mule' in text :
-        return ':salvage:'
+        return '<:salvage:1050919924081643630>'
     if 'black box' in text :
-        return ':blackbox:'
-    return ':gunner_two_oranges:'
+        return '<:blackbox:1050919626231521311>'
+    return '<:gunner_two_oranges:1003106079007326338>'
 def parse_deep_dive_info(text, type):
     dd = None
     for line in text.split('\n'):
