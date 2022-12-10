@@ -32,7 +32,7 @@ class DeepDive:
         diveColor = 0xffc800
         if self.type.startswith("Elite Deep Dive") :
             diveColor = 0xb82500
-        out = discord.Embed(title = "**{type} | {name}".format(type = self.type, name=self.name), color = diveColor)
+        out = discord.Embed(title = "**{type} | {name}**".format(type = self.type, name=self.name), color = diveColor)
         for stage in self.stages:
             if stage[1].startswith("Primary") :
                 continue
