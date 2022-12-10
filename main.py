@@ -25,7 +25,7 @@ class DeepDive:
     
     def to_beautiful_string(self):
         out = f'**{self.type}**\n```\n'
-        out += tabulate(self.stages, header=["Stage", "Primary", "Secondary", "Anomaly", "Warning"], tablefmt="fancy_grid")
+        out += tabulate(self.stages, headers=["Stage", "Primary", "Secondary", "Anomaly", "Warning"], tablefmt="fancy_grid")
         out += '```'
         return out
     def to_beautiful_embed(self):
