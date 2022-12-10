@@ -39,6 +39,7 @@ class DeepDive:
             stageContents = "**Objectives**: {primary_icon} {primary}** / **{secondary_icon} {secondary}\n**Anomaly**:{anomaly_icon} {anomaly}\n**Warning**:{warning_icon} {warning}".format(primary_icon=get_mission_icon(stage[1]), primary=stage[1], secondary_icon=get_mission_icon(stage[2]), secondary=stage[2],anomaly_icon = get_anomaly_icon(stage[3]), anomaly=stage[3], warning_icon=get_warning_icon(stage[4]), warning=stage[4])
             out.add_field(name="Stage {stg}".format(stg=stage[0]), value=stageContents, inline=False)
         return out
+# this icon stuff might be better off in a separate file
 def get_mission_icon(input) :
     text = input.lower()
     if 'morkite' in text :
@@ -62,6 +63,24 @@ def get_mission_icon(input) :
     return '<:gunner_two_oranges:1003106079007326338>'
 def get_anomaly_icon(input) :
     text = input.lower()
+    if 'gold rush' in text :
+        return '<:goldrush:1051001500194832435>'
+    if 'low gravity' in text :
+        return '<:lowgrav:1051001497195905124>'
+    if 'mineral mania' in text :
+        return '<:mineralmania:1051001496289955901>'
+    if 'golden bugs' in text :
+        return '<:goldenbugs:1051001162456899634>'
+    if 'rich atmosphere' in text :
+        return '<:richatmosphere:1051001498177380413>'
+    if 'critical weakness' in text :
+        return '<:critweakness:1051001905238773850>'
+    if 'double xp' in text :
+        return '<:doublexp:1051001499108528218>'
+    if 'volatile guts' in text :
+        return '<:volatileguts:1051002221195689995>'
+    if 'none' in text :
+        return ''
     return '<:gunner_two_oranges:1003106079007326338>'
 def get_warning_icon(input) :
     text = input.lower()
