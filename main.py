@@ -175,7 +175,7 @@ async def on_message(message):
     if any(map(message.content.startswith, dd_mobile_cmd)):
         info = get_last_deep_dive_info_embed()
         print('sending embed')
-        dd = parse_deep_dive_info(get_last_deep_dive_submission(), 'Deep Dive')
+        dd = parse_deep_dive_info(get_last_deep_dive_submission().selftext, 'Deep Dive')
         await message.channel.send(dd.name)
         for embed in info:
             await message.channel.send(embed = embed)
