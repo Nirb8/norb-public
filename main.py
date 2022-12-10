@@ -66,31 +66,31 @@ def get_anomaly_icon(input) :
 def get_warning_icon(input) :
     text = input.lower()
     if 'exploder infestation' in text :
-        return '<:exploderinfestation:1050949081201123328>'
+        return '<:exploderinfestation:1051153082312036482>'
     if 'shield disruption' in text :
-        return ''
+        return '<:shielddisruption:1051152886534512681>'
     if 'mactera plague' in text :
-        return ''
+        return '<:macteraplague:1051153036451516487>'
     if 'cave leech' in text :
-        return ''
+        return '<:caveleechcluster:1051153156689633361>'
     if 'parasites' in text :
-        return ''
+        return '<:parasites:1051153133570637824>'
     if 'regenrative bugs' in text :
-        return ''
+        return '<:regenbugs:1051153112276156506>'
     if 'low oxygen' in text :
-        return ''
+        return '<:lowo2:1051153059646021666>'
     if 'lethal enemies' in text :
-        return ''
+        return '<:lethalenemies:1051152993006915675>'
     if 'haunted cave' in text :
-        return ''
+        return '<:hauntedcave:1051152932730585179>'
     if 'elite threat' in text :
-        return ''
+        return '<:elitethreat:1051152973046231050>'
     if 'swarmageddon' in text :
-        return ''
+        return '<:swarmageddon:1051153013848408155>'
     if 'rival presence' in text :
-        return ''
+        return '<:rivalpresence:1051152908676239490>'
     if 'lithophage outbreak' in text :
-        return ''
+        return '<:lithophage:1051043360548335616>'
     if 'none' in text :
         return ''
     return '<:gunner_two_oranges:1003106079007326338>'
