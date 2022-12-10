@@ -36,10 +36,30 @@ class DeepDive:
         for stage in self.stages:
             if stage[1].startswith("Primary") :
                 continue
-            stageContents = "**Objectives**: {primary}** / **{secondary}\n**Anomaly**: {anomaly}\n**Warning**: {warning}".format(primary=stage[1], secondary=stage[2], anomaly=stage[3], warning=stage[4])
+            stageContents = "**Objectives**: {primary_icon} {primary}** / **{secondary_icon} {secondary}\n**Anomaly**: {anomaly}\n**Warning**: {warning}".format(primary_icon=get_mission_icon(stage[1]), primary=stage[1], secondary_icon=get_mission_icon(stage[2]), secondary=stage[2], anomaly=stage[3], warning=stage[4])
             out.add_field(name="Stage {stg}".format(stg=stage[0]), value=stageContents, inline=False)
         return out
-
+def get_mission_icon(input) :
+    text = input.lower()
+    if 'morkite' in text :
+        return ':mining:'
+    if 'eggs' in text :
+        return ':alienegg:'
+    if 'escort duty' in text :
+        return ':escort:'
+    if 'aquarqs' in text :
+        return ':pointextraction:'
+    if 'refinery' in text :
+        return ':refining:'
+    if 'industrial sabotage' in text :
+        return ':sabotage:'
+    if 'dreadnaught' in text or 'twins' in text or 'hiveguard' in text:
+        return ':elim:'
+    if 'mini-mule' in text :
+        return ':salvage:'
+    if 'black box' in text :
+        return ':blackbox:'
+    return ':gunner_two_oranges:'
 def parse_deep_dive_info(text, type):
     dd = None
     for line in text.split('\n'):
