@@ -36,7 +36,7 @@ class DeepDive:
         for stage in self.stages:
             if stage[1].startswith("Primary") :
                 continue
-            stageContents = "**Objectives**: {primary_icon} {primary}** / **{secondary_icon} {secondary}\n**Anomaly**: {anomaly}\n**Warning**: {warning}".format(primary_icon=get_mission_icon(stage[1]), primary=stage[1], secondary_icon=get_mission_icon(stage[2]), secondary=stage[2], anomaly=stage[3], warning=stage[4])
+            stageContents = "**Objectives**: {primary_icon} {primary}** / **{secondary_icon} {secondary}\n**Anomaly**:{anomaly_icon} {anomaly}\n**Warning**:{warning_icon} {warning}".format(primary_icon=get_mission_icon(stage[1]), primary=stage[1], secondary_icon=get_mission_icon(stage[2]), secondary=stage[2],anomaly_icon = get_anomaly_icon(stage[3]), anomaly=stage[3], warning_icon=get_warning_icon(stage[4]), warning=stage[4])
             out.add_field(name="Stage {stg}".format(stg=stage[0]), value=stageContents, inline=False)
         return out
 def get_mission_icon(input) :
@@ -59,6 +59,40 @@ def get_mission_icon(input) :
         return '<:salvage:1050919924081643630>'
     if 'black box' in text :
         return '<:blackbox:1050919626231521311>'
+    return '<:gunner_two_oranges:1003106079007326338>'
+def get_anomaly_icon(input) :
+    text = input.lower()
+    return '<:gunner_two_oranges:1003106079007326338>'
+def get_warning_icon(input) :
+    text = input.lower()
+    if 'exploder infestation' in text :
+        return '<:exploderinfestation:1050949081201123328>'
+    if 'shield disruption' in text :
+        return ''
+    if 'mactera plague' in text :
+        return ''
+    if 'cave leech' in text :
+        return ''
+    if 'parasites' in text :
+        return ''
+    if 'regenrative bugs' in text :
+        return ''
+    if 'low oxygen' in text :
+        return ''
+    if 'lethal enemies' in text :
+        return ''
+    if 'haunted cave' in text :
+        return ''
+    if 'elite threat' in text :
+        return ''
+    if 'swarmageddon' in text :
+        return ''
+    if 'rival presence' in text :
+        return ''
+    if 'lithophage outbreak' in text :
+        return ''
+    if 'none' in text :
+        return ''
     return '<:gunner_two_oranges:1003106079007326338>'
 def parse_deep_dive_info(text, type):
     dd = None
