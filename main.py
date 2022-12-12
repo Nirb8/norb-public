@@ -32,7 +32,8 @@ class DeepDive:
         diveColor = 0xffc800
         if self.type.startswith("Elite Deep Dive") :
             diveColor = 0xb82500
-        out = discord.Embed(title = "**{type} | {name}**".format(type = self.type, name=self.name), color = diveColor)
+        out = discord.Embed(title = "**{type} | {name} | {biome}**".format(type = self.type, name=self.name, biome=self.biome), color = diveColor)
+
         for stage in self.stages:
             if stage[1].startswith("Primary") :
                 continue
@@ -113,6 +114,28 @@ def get_warning_icon(input) :
     if 'none' in text :
         return ''
     return '<:gunner_two_oranges:1003106079007326338>'
+def get_biome_image_embed(input) :
+    text = input.lower()
+    if 'crystalline caverns' in text :
+        return ''
+    if 'dense biozone' in text :
+        return ''
+    if 'fungus bogs' in text :
+        return ''
+    if 'glacial strata' in text :
+        return ''
+    if 'magma core' in text :
+        return ''
+    if 'radioactive exclusion zone' in text :
+        return ''
+    if 'salt pits' in text :
+        return ''
+    if 'sandblasted corridors' in text :
+        return ''
+    if 'hollow bough' in text :
+        return ''
+    if 'azure weald' in text :
+        return ''
 def parse_deep_dive_info(text, type):
     dd = None
     for line in text.split('\n'):
