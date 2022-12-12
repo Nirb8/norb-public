@@ -32,8 +32,8 @@ class DeepDive:
         diveColor = 0xffc800
         if self.type.startswith("Elite Deep Dive") :
             diveColor = 0xb82500
-        out = discord.Embed(title = "**{type} | {name} | {biome}**".format(type = self.type, name=self.name, biome=self.biome), color = diveColor)
-
+        out = discord.Embed(title = "**{type} | {name}**".format(type = self.type, name=self.name), color = diveColor, author = '{biome}'.format(biome=self.biome), thumbnail=get_biome_image_embed(self.biome))
+        
         for stage in self.stages:
             if stage[1].startswith("Primary") :
                 continue
@@ -117,25 +117,25 @@ def get_warning_icon(input) :
 def get_biome_image_embed(input) :
     text = input.lower()
     if 'crystalline caverns' in text :
-        return ''
+        return 'https://deeprockgalactic.wiki.gg/images/e/ec/Crystalline_caverns_preview.png'
     if 'dense biozone' in text :
-        return ''
+        return 'https://deeprockgalactic.wiki.gg/images/4/4c/Dense_biozone_preview.png'
     if 'fungus bogs' in text :
-        return ''
+        return 'https://deeprockgalactic.wiki.gg/images/d/dc/Fungus_bogs_preview.png'
     if 'glacial strata' in text :
-        return ''
+        return 'https://deeprockgalactic.wiki.gg/images/6/6b/Glacial_strata_preview.png'
     if 'magma core' in text :
-        return ''
+        return 'https://deeprockgalactic.wiki.gg/images/6/6a/Magma_core_preview.png'
     if 'radioactive exclusion zone' in text :
-        return ''
+        return 'https://deeprockgalactic.wiki.gg/images/e/e8/Radioactive_exclusion_zone_preview.png'
     if 'salt pits' in text :
-        return ''
+        return 'https://deeprockgalactic.wiki.gg/images/d/df/Salt_pits_preview.png'
     if 'sandblasted corridors' in text :
-        return ''
+        return 'https://deeprockgalactic.wiki.gg/images/9/9b/Sandblasted_corridors_preview.png'
     if 'hollow bough' in text :
-        return ''
+        return 'https://deeprockgalactic.wiki.gg/images/c/c2/Hollow_bough_preview.png'
     if 'azure weald' in text :
-        return ''
+        return 'https://deeprockgalactic.wiki.gg/images/e/e5/Azure_weald_preview.png'
 def parse_deep_dive_info(text, type):
     dd = None
     for line in text.split('\n'):
