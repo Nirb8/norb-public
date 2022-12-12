@@ -38,7 +38,7 @@ class DeepDive:
         for stage in self.stages:
             if stage[1].startswith("Primary") :
                 continue
-            stageContents = "**Objectives**: {primary_icon} {primary}** / **{secondary_icon} {secondary}\n**Anomaly**:{anomaly_icon} {anomaly}\n**Warning**:{warning_icon} {warning}".format(primary_icon=get_mission_icon(stage[1]), primary=stage[1], secondary_icon=get_mission_icon(stage[2]), secondary=stage[2],anomaly_icon = get_anomaly_icon(stage[3]), anomaly=stage[3], warning_icon=get_warning_icon(stage[4]), warning=stage[4])
+            stageContents = "**Objectives**: {primary_icon} {primary}** / **{secondary_icon} {secondary}\n**Anomaly**: {anomaly_icon} {anomaly}\n**Warning**: {warning_icon} {warning}".format(primary_icon=get_mission_icon(stage[1]), primary=stage[1], secondary_icon=get_mission_icon(stage[2]), secondary=stage[2],anomaly_icon = get_anomaly_icon(stage[3]), anomaly=stage[3], warning_icon=get_warning_icon(stage[4]), warning=stage[4])
             out.add_field(name="Stage {stg}".format(stg=stage[0]), value=stageContents, inline=False)
         return out
 # this icon stuff might be better off in a separate file
