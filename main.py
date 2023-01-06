@@ -282,7 +282,6 @@ async def on_message(message):
         for reaction in emoteList:
             print('adding reaction')
             await m.add_reaction(reaction)
-            time.sleep()
         await c.send('Remember not to do anything stupid! 😃')
         await c.send('TODOS: ' + todolist)
         await c.send('LONG-TERM GOALS: ' + longertermgoals)
