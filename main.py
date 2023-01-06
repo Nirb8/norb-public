@@ -223,8 +223,8 @@ intents.message_content = True
 
 client = discord.Client(intents=intents)
 
-todolist = "- Do the disc quest, steal plane-attuned forks and upper/lower plane symbols from Eronan"
-longertermgoals = "Save violet, PR campaign, secure funding, assassinate duke/dealer, CJ drug intervention, talk with Mrs. Boudua for a political ally, teach Tyrell morals"
+todolist = "- Save violet, Steal plane-attuned forks and upper/lower plane symbols from Eronan, CJ drug intervention(wip)"
+longertermgoals = "PR campaign, secure funding, assassinate duke/dealer, talk with Mrs. Boudua for a political ally, teach Tyrell morals"
 
 @client.event
 async def on_ready():
