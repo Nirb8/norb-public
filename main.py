@@ -96,7 +96,7 @@ def get_warning_icon(input) :
         return '<:caveleechcluster:1051153156689633361>'
     if 'parasites' in text :
         return '<:parasites:1051153133570637824>'
-    if 'regenrative bugs' in text :
+    if 'regenerative bugs' in text :
         return '<:regenbugs:1051153112276156506>'
     if 'low oxygen' in text :
         return '<:lowo2:1051153059646021666>'
