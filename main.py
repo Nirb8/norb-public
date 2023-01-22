@@ -223,8 +223,8 @@ intents.message_content = True
 
 client = discord.Client(intents=intents)
 
-todolist = "- Save violet, Steal plane-attuned forks and upper/lower plane symbols from Eronan, CJ drug intervention(wip)"
-longertermgoals = "PR campaign, secure funding, assassinate duke/dealer, talk with Mrs. Boudua for a political ally, teach Tyrell morals"
+todolist = "Heist the treasury, heist amethyst, follow up on CJ2 in Timeless Forest, give Glaedr the helliron back, ensure that Violet consumes sustenance and rests"
+longertermgoals = "PR campaign, assassinate duke/dealer, talk with Mrs. Boudua for a political ally, teach Tyrell morals, get a long-term supply of tar, heist hell-metal, become demigods"
 
 @client.event
 async def on_ready():
