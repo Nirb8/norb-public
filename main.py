@@ -65,8 +65,6 @@ def get_mission_icon(input) :
     return '<:gunner_two_oranges:1003106079007326338>'
 def get_anomaly_icon(input) :
     text = input.lower()
-    print("checking anomalies")
-    print(input)
     if 'gold rush' in text :
         return '<:goldrush:1051001500194832435>'
     if 'low gravity' in text :
@@ -152,6 +150,7 @@ def parse_deep_dive_info(text, type):
             if stage == 'Stage' or stage == ':-':
                 continue
             dd.add_stage(stage, primary, secondary, anomaly, warning)
+            print(warning)
             if stage == '3':
                 break
     return dd
