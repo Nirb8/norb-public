@@ -150,7 +150,6 @@ def parse_deep_dive_info(text, type):
             if stage == 'Stage' or stage == ':-':
                 continue
             dd.add_stage(stage, primary, secondary, anomaly, warning)
-            print(warning)
             if stage == '3':
                 break
     return dd
