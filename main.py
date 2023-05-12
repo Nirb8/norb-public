@@ -56,7 +56,7 @@ def get_mission_icon(input) :
         return '<:refining:1050919894478245970>'
     if 'industrial sabotage' in text :
         return '<:sabotage:1050919908772417597>'
-    if 'dreadnaught' in text or 'twins' in text or 'hiveguard' in text:
+    if 'dreadnaught' in text or 'dreadnought' in text or 'twins' in text or 'hiveguard' in text:
         return '<:elim:1050919798395129956>'
     if 'mini-mule' in text :
         return '<:salvage:1050919924081643630>'
