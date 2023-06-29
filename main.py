@@ -48,6 +48,8 @@ def get_mission_icon(input) :
         return '<:mining:1050919827809783950>'
     if 'eggs' in text :
         return '<:alienegg:1050919736516558878>'
+    if 'egg' in text :
+        return '<:alienegg:1050919736516558878>'
     if 'escort duty' in text :
         return '<:escort:1050919813242953769>'
     if 'aquarqs' in text :
@@ -59,6 +61,8 @@ def get_mission_icon(input) :
     if 'dreadnaught' in text or 'dreadnought' in text or 'twins' in text or 'hiveguard' in text:
         return '<:elim:1050919798395129956>'
     if 'mini-mule' in text :
+        return '<:salvage:1050919924081643630>'
+    if 'mule' in text :
         return '<:salvage:1050919924081643630>'
     if 'black box' in text :
         return '<:blackbox:1050919626231521311>'
