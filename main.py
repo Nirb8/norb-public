@@ -52,9 +52,9 @@ def get_mission_icon(input) :
         return '<:alienegg:1050919736516558878>'
     if 'escort duty' in text :
         return '<:escort:1050919813242953769>'
-    if 'aquarqs' in text :
+    if 'aquarq' in text :
         return '<:pointextraction:1050919841617416203>'
-    if 'refinery' in text :
+    if 'refinery' in text or 'refining' in text:
         return '<:refining:1050919894478245970>'
     if 'industrial sabotage' in text :
         return '<:sabotage:1050919908772417597>'
