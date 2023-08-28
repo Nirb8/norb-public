@@ -280,7 +280,9 @@ async def on_message(message):
         # vote += ' It\'s voting time! \n Monday Evening ♠️\nTuesday Evening ♥️\n Wednesday Evening ♦️\nThursday Evening♣️ \nFriday Evening 🃏 \nSaturday 10am-2pm 🟨 \nSaturday 12-4pm🟩'
         # vote += '\nSaturday 4pm-8pm 🟦 \nSaturday 6-10pm 🟪 \nSaturday 8pm-12 🔴 \nSunday 10am-2pm 🟠 \nSunday 12-4pm🟡'
         # vote += '\nSunday 4pm-8pm 🟢 \nSunday 6-10pm 🔵 \nSunday 8pm-12 🟣 \nNot this week 🏳️'
-        vote += "\n🔴 7-11pm est\n🟠8-12pm est\n🟡7-10pm est\n🟢8-11pm est\n🔵7-9pm est\n🟣8-10pm est\n⚫️9-11pm est"
+        
+        
+        vote += "\n🔴 7-11pm est (your local timezone: <t:1693263600:t>)\n🟠8-12pm est (your local timezone: <t:1693267200:t>)\n🟡7-10pm est (your local timezone: <t:1693263600:t>)\n🟢8-11pm est (your local timezone: <t:1693267200:t>)\n🔵7-9pm est (your local timezone: <t:1693263600:t>)\n🟣8-10pm est (your local timezone: <t:1693263600:t>)\n⚫️9-11pm est (your local timezone: <t:1693270800:t>)"
         m = await c.send(vote)
         # emoteList = ['\N{Black Spade Suit}','\N{Black Heart Suit}','\N{Black Diamond Suit}','\N{Black Club Suit}','\N{Playing Card Black Joker}','\N{Large Yellow Square}','\N{Large Green Square}','\N{Large Blue Square}','\N{Large Purple Square}','\N{Large Red Circle}', '\N{Large Orange Circle}', '\N{Large Yellow Circle}','\N{Large Green Circle}', '\N{Large Blue Circle}', '\N{Large Purple Circle}','\N{Waving White Flag}']
         emoteList = ['\N{Large Red Circle}', '\N{Large Orange Circle}', '\N{Large Yellow Circle}','\N{Large Green Circle}', '\N{Large Blue Circle}', '\N{Large Purple Circle}','\N{Waving White Flag}']
