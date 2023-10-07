@@ -293,6 +293,26 @@ async def on_message(message):
         await c.send('Remember not to do anything stupid! 😃')
         await c.send('TODOS: ' + todolist)
         await c.send('LONG-TERM GOALS: ' + longertermgoals)
+    
+    
+    if message.content.startswith('!weeknight'):
+        print('doing schedule, for weeknight')
+        c = message.channel
+        vote = '<@&692777373543956561> Initializing forced voting process...done in 0.56 ms. Begin remote transmission from orb with ORB_NAME: Phobos.'
+        
+        vote += "\n🔴 7-11pm est (your local timezone: <t:1693263600:t>)\n🟠8-12pm est (your local timezone: <t:1693267200:t>)\n🟡7-10pm est (your local timezone: <t:1693263600:t>)\n🟢8-11pm est (your local timezone: <t:1693267200:t>)\n🔵7-9pm est (your local timezone: <t:1693263600:t>)\n🟣8-10pm est (your local timezone: <t:1693267200:t>)\n⚫️9-11pm est (your local timezone: <t:1693270800:t>)"
+        m = await c.send(vote)
+        emoteList = ['\N{Large Yellow Square}','\N{Large Green Square}','\N{Large Blue Square}','\N{Large Purple Square}','\N{Large Red Circle}', '\N{Large Orange Circle}', '\N{Large Yellow Circle}','\N{Large Green Circle}', '\N{Large Blue Circle}', '\N{Large Purple Circle}','\N{Waving White Flag}']
+        # emoteList = ['\N{Large Red Circle}', '\N{Large Orange Circle}', '\N{Large Yellow Circle}','\N{Large Green Circle}', '\N{Large Blue Circle}', '\N{Large Purple Circle}','\N{Waving White Flag}']
+        for reaction in emoteList:
+            print('adding reaction')
+            await m.add_reaction(reaction)
+        await c.send('Remember not to do anything stupid! 😃')
+        await c.send('TODOS: ' + todolist)
+        await c.send('LONG-TERM GOALS: ' + longertermgoals)
+    
+    
+        
     if message.content.startswith('!todo'):
         await message.channel.send('TODOS: ' + todolist)
         await message.channel.send('LONG-TERM GOALS: ' + longertermgoals)
