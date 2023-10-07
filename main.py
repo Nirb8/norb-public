@@ -277,14 +277,15 @@ async def on_message(message):
         print('doing schedule')
         c = message.channel
         vote = '<@&692777373543956561> Initializing forced voting process...done in 0.56 ms. Begin remote transmission from orb with ORB_NAME: Phobos.'
-        # vote += ' It\'s voting time! \n Monday Evening ♠️\nTuesday Evening ♥️\n Wednesday Evening ♦️\nThursday Evening♣️ \nFriday Evening 🃏 \nSaturday 10am-2pm 🟨 \nSaturday 12-4pm🟩'
-        # vote += '\nSaturday 4pm-8pm 🟦 \nSaturday 6-10pm 🟪 \nSaturday 8pm-12 🔴 \nSunday 10am-2pm 🟠 \nSunday 12-4pm🟡'
-        # vote += '\nSunday 4pm-8pm 🟢 \nSunday 6-10pm 🔵 \nSunday 8pm-12 🟣 \nNot this week 🏳️'
+        # vote += ' It\'s voting time! \n Monday Evening ♠️\nTuesday Evening ♥️\n Wednesday Evening ♦️\nThursday Evening♣️ \nFriday Evening 🃏 \n'
+        vote += 'Saturday 10am-2pm (starts at <t:1696687200:t>)🟨 \nSaturday 12-4pm (starts at <t:1696694400:t>)🟩'
+        vote += '\nSaturday 4pm-8pm (starts at <t:1696708800:t>)🟦 \nSaturday 6-10pm (starts at <t:1696716000:t>)🟪 \nSaturday 8pm-12 (starts at <t:1696723200:t>)🔴 \nSunday 10am-2pm (starts at <t:1696687200:t>)🟠 \nSunday 12-4pm (starts at <t:1696694400:t>)🟡'
+        vote += '\nSunday 4pm-8pm (starts at <t:1696708800:t>)🟢 \nSunday 6-10pm (starts at <t:1696716000:t>)🔵 \nSunday 8pm-12 (starts at <t:1696723200:t>)🟣 \nNot this week 🏳️'
         
         
-        vote += "\n🔴 7-11pm est (your local timezone: <t:1693263600:t>)\n🟠8-12pm est (your local timezone: <t:1693267200:t>)\n🟡7-10pm est (your local timezone: <t:1693263600:t>)\n🟢8-11pm est (your local timezone: <t:1693267200:t>)\n🔵7-9pm est (your local timezone: <t:1693263600:t>)\n🟣8-10pm est (your local timezone: <t:1693267200:t>)\n⚫️9-11pm est (your local timezone: <t:1693270800:t>)"
+        # vote += "\n🔴 7-11pm est (your local timezone: <t:1693263600:t>)\n🟠8-12pm est (your local timezone: <t:1693267200:t>)\n🟡7-10pm est (your local timezone: <t:1693263600:t>)\n🟢8-11pm est (your local timezone: <t:1693267200:t>)\n🔵7-9pm est (your local timezone: <t:1693263600:t>)\n🟣8-10pm est (your local timezone: <t:1693267200:t>)\n⚫️9-11pm est (your local timezone: <t:1693270800:t>)"
         m = await c.send(vote)
-        # emoteList = ['\N{Black Spade Suit}','\N{Black Heart Suit}','\N{Black Diamond Suit}','\N{Black Club Suit}','\N{Playing Card Black Joker}','\N{Large Yellow Square}','\N{Large Green Square}','\N{Large Blue Square}','\N{Large Purple Square}','\N{Large Red Circle}', '\N{Large Orange Circle}', '\N{Large Yellow Circle}','\N{Large Green Circle}', '\N{Large Blue Circle}', '\N{Large Purple Circle}','\N{Waving White Flag}']
+        # emoteList = ['\N{Large Yellow Square}','\N{Large Green Square}','\N{Large Blue Square}','\N{Large Purple Square}','\N{Large Red Circle}', '\N{Large Orange Circle}', '\N{Large Yellow Circle}','\N{Large Green Circle}', '\N{Large Blue Circle}', '\N{Large Purple Circle}','\N{Waving White Flag}']
         emoteList = ['\N{Large Red Circle}', '\N{Large Orange Circle}', '\N{Large Yellow Circle}','\N{Large Green Circle}', '\N{Large Blue Circle}', '\N{Large Purple Circle}','\N{Waving White Flag}']
         for reaction in emoteList:
             print('adding reaction')
