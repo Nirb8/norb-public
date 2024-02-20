@@ -227,8 +227,8 @@ intents.message_content = True
 
 client = discord.Client(intents=intents)
 
-todolist = "Heist the treasury, heist amethyst, follow up on CJ2 in Timeless Forest, get Glaedr more helliron to make up for his troubles, ensure that Violet consumes sustenance and rests, check out magic door #4, check out Estori floating ruins"
-longertermgoals = "PR campaign, assassinate duke/dealer, talk with Mrs. Boudua for a political ally, teach Tyrell morals, get a long-term supply of tar, heist hell-metal, become demigods"
+todolist = "SEASON 2!!!"
+longertermgoals = "SEASON 2!!!!!"
 
 @client.event
 async def on_ready():
