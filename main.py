@@ -66,6 +66,9 @@ def get_mission_icon(input) :
         return '<:salvage:1050919924081643630>'
     if 'black box' in text :
         return '<:blackbox:1050919626231521311>'
+    if 'crystal scan' in text or 'deep scan' in text :
+        return '<:deepscan:1306799415704555581>'
+        
     return '<:gunner_two_oranges:1003106079007326338>'
 def get_anomaly_icon(input) :
     text = input.lower()
@@ -85,6 +88,10 @@ def get_anomaly_icon(input) :
         return '<:doublexp:1051001499108528218>'
     if 'volatile guts' in text :
         return '<:volatileguts:1051002221195689995>'
+    if 'blood sugar' in text :
+        return '<:bloodsugar:1306799343969505280>'
+    if 'secret secondary' in text :
+        return '<:secretsecondary:1306799374629863485>'
     if 'none' in text :
         return ''
     return '<:gunner_two_oranges:1003106079007326338>'
@@ -116,6 +123,10 @@ def get_warning_icon(input) :
         return '<:rivalpresence:1051152908676239490>'
     if 'lithophage outbreak' in text :
         return '<:lithophage:1051043360548335616>'
+    if 'duck and cover' in text :
+        return '<:duckandcover:1306799392119984140>'
+    if 'ebonite outbreak' in text:
+        return '<:rockinfestation:1306799404056838166>'
     if 'none' in text :
         return ''
     return '<:gunner_two_oranges:1003106079007326338>'
